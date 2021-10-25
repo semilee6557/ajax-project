@@ -3,18 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJAX Project</title>
+  <title>Weather Application</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
+
   <header>
+    <nav>
+      <div class="menu-bar">
+        <i class="fas fa-bars"></i>
+      </div>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+
+    </nav>
   </header>
+
   <main>
+
+    <div class="home">
+
+      <div class="left-arrow"><i class="fas fa-chevron-left"></i></div>
+      <div class="card-container">
+      </div>
+      <div class="right-arrow"><i class="fas fa-angle-right"></i></div>
+    </div>
+
+    <div class="side-menu hidden">
+
+      <div class="menu-bar">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="menu-container">
+        <div class="menu">Hello There!</div>
+        <div class="menu">
+          <div class="menu-list menu-home">Home</div>
+          <div class="menu-list menu-add-city">Add City</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="searching-page-container hidden">
+      <div class="searching-page">
+        <div class="search-section">
+          <form class="search-bar" action="#">
+            <input class="search-city-input" type="text" placeholder="Search by city name" name="search">
+            <button class="search-icon" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+
+          <div class="result"></div>
+        </div>
+
+
+        <div class="vl"></div>
+
+        <div class="popular-list">
+          <div class="popular-list-heading">Popular places</div>
+          <div class="popular-city-container">
+            <div class="popular-city">Seoul</div>
+            <div class="popular-city">New York</div>
+            <div class="popular-city">London</div>
+            <div class="popular-city">San Diego</div>
+            <div class="popular-city">Tokyo</div>
+            <div class="popular-city">Paris</div>
+            <div class="popular-city">Hawaii</div>
+            <div class="popular-city">Dubai</div>
+            <div class="popular-city">Bangkok</div>
+            <div class="popular-city">Singapore</div>
+            <div class="popular-city">Moscow</div>
+            <div class="popular-city">Los Angeles</div>
+            <div class="popular-city">Istanbul</div>
+            <div class="popular-city">Barcelona</div>
+            <div class="popular-city">Madrid</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-city-weather-card hidden">
+      <div class="search-result-content">
+      </div>
+    </div>
+
+
+    <div class="follow-confirmation-container hidden">
+    </div>
+
+
+    <div class="unfollow-confirmation-container hidden">
+    </div>
+
   </main>
-  <script src="js/data.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
