@@ -1,0 +1,341 @@
+:root {
+  --cardColor: #56ccf2;
+  --bodyBackgroundColor: #fff;
+  --sideMenuColor: #aee1e1;
+}
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input {
+  width: 60%;
+  height: 45px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  margin: 5px 3px 0 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 26px;
+  left: 4px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+body {
+  background-color: var(--bodyBackgroundColor);
+  width: 100vw;
+}
+
+button {
+  cursor: pointer;
+}
+
+nav,
+.home {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.add-card {
+  font-size: 7rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 30px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.card {
+  width: calc(100% / 3 - 20px);
+  height: 500px;
+
+  /* margin: 0 10px; */
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: var(--cardColor);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  margin: 0 5px;
+  justify-content: space-evenly;
+
+  /* z-index: -1; */
+}
+
+.city-name {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.close-btn {
+  align-self: flex-end;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.dark-mode {
+  --cardColor: #827397;
+  --bodyBackgroundColor: #363062;
+  --sideMenuColor: #4d4c7d;
+}
+
+.degree {
+  font-size: 2rem;
+}
+
+.degree-max-min {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.follow {
+  width: 150px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.follow-btn,
+.cancel-btn,
+.unfollow-btn {
+  width: 80px;
+  height: 30px;
+}
+
+.follow-btn-container,
+.unfollow-btn-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.follow-confirmation,
+.unfollow-confirmation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.follow-confirmation-container,
+.unfollow-confirmation-container {
+  width: 500px;
+  height: 250px;
+  border: 1px solid black;
+  position: absolute;
+  left: 28%;
+  top: 30%;
+  background-color: #d3e0dc;
+}
+
+.follow-msg,
+.unfollow-msg {
+  margin: 50px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu {
+  margin: 70px;
+  font-size: 2rem;
+}
+
+.menu-bar {
+  font-size: 2rem;
+  margin: 10px 15px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.menu-list {
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.result-city-weather-card {
+  width: 450px;
+  height: 480px;
+  border: 1px solid black;
+  margin-left: 30%;
+  margin-top: 0%;
+  text-align: center;
+  background-color: var(--cardColor);
+}
+
+.popular-city {
+  background-color: #e0e0e0;
+  border-radius: 30px;
+  width: calc((100% - 40px) / 3);
+  margin: 0 10px 25px 0;
+  height: 40px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.popular-city-container,
+.result {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popular-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-list-heading {
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+}
+
+.search-city-input {
+  width: 85%;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #e0e0e0;
+}
+
+.search-icon {
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  padding-top: 5px;
+}
+
+.search-section,
+.popular-list {
+  width: calc((100% - 6px) / 2);
+  padding: 30px;
+}
+
+.searching-page {
+  display: flex;
+}
+
+.searching-page-container {
+  width: 1000px;
+  height: 500px;
+  border: 1px solid black;
+  position: absolute;
+  left: 70px;
+  top: 70px;
+  z-index: -1;
+  background-color: #f2f2f2;
+
+  /* display: flex; */
+}
+
+.side-menu {
+  width: 35%;
+  height: 100%;
+  border: 1px solid black;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  /* z-index: 1; */
+  background-color: var(--sideMenuColor);
+}
+
+.vl {
+  border-left: 6px solid green;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.weather-img {
+  width: calc(100% / 3);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
